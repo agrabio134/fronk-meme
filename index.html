@@ -142,7 +142,7 @@ a{color:#10131A}a:hover{color:#1E6FD9}
 
               <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #10131A; color: #F6E7B8; border-radius: 10px; font-family: 'IBM Plex Mono', monospace">
                 <span style="font-size: 12px; color: #9AA0AE; text-transform: uppercase; letter-spacing: .12em">CA:</span>
-                <span style="font-size: 17px; font-weight: 700; letter-spacing: .06em">soon<span class="fk-blink" style="color: #8BD63A">█</span></span>
+                <span style="flex: 1 1 auto; min-width: 0; font-size: 14px; font-weight: 700; letter-spacing: .02em; overflow-wrap: anywhere; line-height: 1.4">HNcUE2N2uUvWE51j3yuyAUMtmCpwYvvCxycwLWscpump</span><button class="fk-btn" type="button" data-copy-ca aria-label="Copy contract address" style="flex: 0 0 auto; min-height: 44px; padding: 0 16px; background: #8BD63A; color: #10131A; border: 2px solid #10131A; border-radius: 8px; font-family: 'Lilita One', sans-serif; font-size: 16px; letter-spacing: .02em">Copy</button>
               </div>
 
               <div class="fk-ctas" style="display: flex; flex-wrap: wrap; gap: 12px">
@@ -195,7 +195,7 @@ a{color:#10131A}a:hover{color:#1E6FD9}
       </div>
       <div class="fk-tray" style="flex: 0 0 auto; display: flex; align-items: center; gap: 10px; padding: 0 18px; background: #1559B3; border-left: 3px solid #10131A; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">
         <span style="width: 10px; height: 10px; border-radius: 50%; background: #FF6B66; border: 2px solid #10131A"></span>
-        CA: soon
+        CA: HNcU…pump
       </div>
     </div>
   </section>
@@ -357,9 +357,9 @@ a{color:#10131A}a:hover{color:#1E6FD9}
       <h2 style="margin: 0; font-family: 'Lilita One', sans-serif; font-weight: 400; font-size: clamp(56px, 9vw, 128px); line-height: .9; color: #8BD63A; -webkit-text-stroke: 3px #10131A; text-shadow: 7px 7px 0 #10131A">Stay with FRONK.</h2>
       <p style="margin: 0; font-size: 20px; line-height: 1.5; color: #FFFFFF; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,.5)">You weren’t getting a real job either.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 8px">
-        <div style="display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 22px; background: #10131A; color: #F6E7B8; border: 3px solid #10131A; border-radius: 12px; font-family: 'IBM Plex Mono', monospace">
+        <div style="display: flex; align-items: center; gap: 12px; min-height: 60px; max-width: 100%; box-sizing: border-box; padding: 8px 8px 8px 20px; background: #10131A; color: #F6E7B8; border: 3px solid #10131A; border-radius: 12px; font-family: 'IBM Plex Mono', monospace">
           <span style="font-size: 12px; color: #9AA0AE; text-transform: uppercase; letter-spacing: .12em">CA</span>
-          <span style="font-size: 18px; font-weight: 700">soon<span class="fk-blink" style="color: #8BD63A">█</span></span>
+          <span style="flex: 1 1 auto; min-width: 0; font-size: 15px; font-weight: 700; overflow-wrap: anywhere; line-height: 1.4; text-align: left">HNcUE2N2uUvWE51j3yuyAUMtmCpwYvvCxycwLWscpump</span><button class="fk-btn" type="button" data-copy-ca aria-label="Copy contract address" style="flex: 0 0 auto; min-height: 44px; padding: 0 16px; background: #8BD63A; color: #10131A; border: 2px solid #10131A; border-radius: 8px; font-family: 'Lilita One', sans-serif; font-size: 16px; letter-spacing: .02em">Copy</button>
         </div>
         <a class="fk-btn" href="https://x.com/fronkonsol" style="display: inline-flex; align-items: center; gap: 10px; min-height: 60px; padding: 0 26px; background: #FFFDF5; color: #10131A; text-decoration: none; border: 3px solid #10131A; border-radius: 12px; box-shadow: 4px 4px 0 #10131A; font-family: 'Lilita One', sans-serif; font-size: 20px">
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -383,6 +383,12 @@ a{color:#10131A}a:hover{color:#1E6FD9}
   var err=document.getElementById('fk-err');
   document.querySelectorAll('[data-open-err]').forEach(function(b){b.addEventListener('click',function(){err.hidden=false;var s=err.querySelector('[data-close-err]');if(s)s.focus();});});
   document.querySelectorAll('[data-close-err]').forEach(function(b){b.addEventListener('click',function(){err.hidden=true;});});
+  var CA='HNcUE2N2uUvWE51j3yuyAUMtmCpwYvvCxycwLWscpump';
+  document.querySelectorAll('[data-copy-ca]').forEach(function(b){b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1500);};
+    function fallback(){var t=document.createElement('textarea');t.value=CA;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(t);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(CA).then(done,fallback);}else{fallback();}
+  });});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')err.hidden=true;});
 })();
 </script>
