@@ -35,6 +35,16 @@ a{color:#10131A}a:hover{color:#1E6FD9}
 .fk-thumb:hover{outline:3px solid #1E6FD9;outline-offset:2px}
 @media (prefers-reduced-motion: reduce){.fk-tape,.fk-blink,.fk-float,.fk-pop{animation:none}}
 @media (max-width: 860px){.fk-desk-icons{display:none !important}.fk-tray{display:none !important}}
+@media (min-width: 861px){
+.fk-top{min-height:600px !important;height:100vh;height:100svh}
+.fk-hero{padding:clamp(14px,3vh,40px) 24px !important}
+.fk-heromain{padding-top:0 !important;align-self:center}
+.fk-winbody{padding:clamp(18px,3.5vh,36px) !important;gap:clamp(18px,3vh,36px) !important}
+.fk-pfp{flex:0 0 auto !important;width:min(340px,40vh);min-width:0 !important}
+.fk-h1{font-size:clamp(60px,min(10vw,13vh),132px) !important}
+.fk-herotext{gap:clamp(8px,1.6vh,18px) !important}
+.fk-herotext .fk-ctas a,.fk-herotext .fk-ctas button{min-height:clamp(44px,6vh,52px) !important}
+}
 @media (max-width: 640px){
 .fk-hero{padding:18px 14px 32px !important}
 .fk-heromain{padding-top:0 !important}
@@ -67,7 +77,7 @@ a{color:#10131A}a:hover{color:#1E6FD9}
 <div style="font-family: Inter, system-ui, sans-serif; color: #10131A; background: #F6E7B8; overflow-x: hidden">
 
   <!-- ============ DESKTOP HERO ============ -->
-  <section id="top" style="position: relative; min-height: 860px; display: flex; flex-direction: column; overflow: hidden">
+  <section id="top" class="fk-top" style="position: relative; min-height: 860px; display: flex; flex-direction: column; overflow: hidden">
     <img src="assets/hill.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%">
     <div style="position: absolute; inset: 0; background: rgba(16,40,90,0.18)"></div>
 
